@@ -18,10 +18,11 @@ class NeuralNetwork():
     def __sigmoid(self, x):
         return 1 / (1 + exp(-x))
 
+    # Learning rate eta definition
     # The derivative of the Sigmoid function.
     # This is the gradient of the Sigmoid curve.
     # It indicates how confident we are about the existing weight.
-    # check papers online where this is derived. works out pretty well. f'(x) = f(x)(1-f(x))
+    # Check papers online where this is derived. works out pretty well. f'(x) = f(x)(1-f(x))
     def __sigmoid_derivative(self, x):
         return x * (1 - x)
 
@@ -76,4 +77,4 @@ if __name__ == "__main__":
 
     # final output after learning
     print ("Final Output after learning:")
-    print (neural_network.think(training_set_inputs))
+    print (neural_network.think(array([1, 0, 0])))
